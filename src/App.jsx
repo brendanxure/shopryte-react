@@ -3,6 +3,7 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import ProductList from './ProductList'
+import CategoryFilter from './CategoryFilter'
 
 function App() {
   const [products, setProducts] = useState([])
@@ -14,7 +15,7 @@ function App() {
   console.log(products)
   console.log(category)
 
-  const baseUrl = 'http://localhost:8080'
+  const baseUrl = import.meta.env.VITE_API_BASE_URL
   useEffect(() => {
     fetch(baseUrl + '/api/products')
       .then(response => response.json())
@@ -33,12 +34,27 @@ function App() {
     setSortOrder(event.target.value)
   }
 
+  const handleCategory = (categoryId) => {
+    setSelectedCategory(categoryId ? Number(categoryId) : null)
+  }
+
+  const filteredProducts = products.filter(product => {
+    return ((selectedCategory ? product.category.id === selectedCategory : true)
+      && product.name.toLowerCase().includes(searchTerm.toLowerCase()))
+  }).sort((a, b) => {
+    if (sortOrder === "asc") {
+      return a.price - b.price
+    } else {
+      return b.price - a.price
+    }
+  })
+
   return (
     <div className='container'>
       <h1 className='my-4'>Product Catalog</h1>
       <div className='row align-items-center mb-4'>
         <div className='col-md-3 col-sm-12 mb-2'>
-          <p>Category Filter</p>
+          <CategoryFilter category={category} onSelect={handleCategory} />
         </div>
         <div className='col-md-5 col-sm-12 mb-2'>
           <input type="text" className='form-control' placeholder='Search for products' onChange={handleSearch} name="" id="" />
@@ -52,7 +68,7 @@ function App() {
         </div>
       </div>
       <div>
-        {products.length ? (<ProductList products={products} />) : (<p>No product found</p>)}
+        {filteredProducts.length ? (<ProductList products={filteredProducts} />) : (<p>No product found</p>)}
       </div>
     </div>
   )
