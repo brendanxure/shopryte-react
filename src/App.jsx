@@ -15,7 +15,7 @@ function App() {
   console.log(products)
   console.log(category)
 
-  const baseUrl = import.meta.env.VITE_API_BASE_URL
+  const baseUrl = import.meta.env.VITE_API_PROD_URL
   useEffect(() => {
     fetch(baseUrl + '/api/products')
       .then(response => response.json())
