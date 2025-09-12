@@ -12,7 +12,7 @@ const AddProduct = () => {
     const [category, setCategory] = useState([])
     const navigate = useNavigate()
 
-    const baseUrl = import.meta.env.VITE_API_BASE_URL
+    const baseUrl = import.meta.env.VITE_API_PROD_URL
     const key = import.meta.env.VITE_API_FILE
     useEffect(() => {
 
