@@ -7,7 +7,7 @@ const CategoryFilter = ({ category, onSelect }) => {
                 <option value="">All Categories</option>
                 {category.map(eachCat =>
                     <option key={eachCat.id} value={eachCat.id}>
-                        {eachCat.name}
+                        {eachCat.catName}
                     </option>
                 )}
 

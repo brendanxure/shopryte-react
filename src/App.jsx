@@ -4,6 +4,7 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import ProductList from './ProductList'
 import CategoryFilter from './CategoryFilter'
+import Navbar from './Navbar'
 
 function App() {
   const [products, setProducts] = useState([])
@@ -15,7 +16,7 @@ function App() {
   console.log(products)
   console.log(category)
 
-  const baseUrl = import.meta.env.VITE_API_PROD_URL
+  const baseUrl = import.meta.env.VITE_API_BASE_URL
   useEffect(() => {
     fetch(baseUrl + '/api/products')
       .then(response => response.json())
@@ -39,8 +40,8 @@ function App() {
   }
 
   const filteredProducts = products.filter(product => {
-    return ((selectedCategory ? product.category.id === selectedCategory : true)
-      && product.name.toLowerCase().includes(searchTerm.toLowerCase()))
+    return ((selectedCategory ? product.categoryDto.id === selectedCategory : true)
+      && product?.prodName?.toLowerCase().includes(searchTerm?.toLowerCase()))
   }).sort((a, b) => {
     if (sortOrder === "asc") {
       return a.price - b.price
@@ -48,6 +49,8 @@ function App() {
       return b.price - a.price
     }
   })
+
+  console.log(filteredProducts)
 
   return (
     <div className='container'>
