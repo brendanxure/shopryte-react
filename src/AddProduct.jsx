@@ -94,84 +94,86 @@ const AddProduct = () => {
     }
 
     return (
-        <form onSubmit={handleSubmit} className="p-3 border rounded shadow-sm">
-            {/* Product Name */}
-            <div className="mb-3">
-                <label htmlFor="name" className="form-label">Product Name</label>
-                <input
-                    type="text"
-                    className="form-control"
-                    id="name"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleChange}
-                    required
-                />
-            </div>
+        <div className='container' style={{ minWidth: "700px" }}>
+            <form onSubmit={handleSubmit} className="p-3 border rounded shadow-sm">
+                {/* Product Name */}
+                <div className="mb-3">
+                    <label htmlFor="name" className="form-label">Product Name</label>
+                    <input
+                        type="text"
+                        className="form-control"
+                        id="name"
+                        name="name"
+                        value={formData.name}
+                        onChange={handleChange}
+                        required
+                    />
+                </div>
 
-            {/* Description */}
-            <div className="mb-3">
-                <label htmlFor="description" className="form-label">Description</label>
-                <textarea
-                    className="form-control"
-                    id="description"
-                    name="description"
-                    rows="3"
-                    value={formData.description}
-                    onChange={handleChange}
-                    required
-                ></textarea>
-            </div>
+                {/* Description */}
+                <div className="mb-3">
+                    <label htmlFor="description" className="form-label">Description</label>
+                    <textarea
+                        className="form-control"
+                        id="description"
+                        name="description"
+                        rows="3"
+                        value={formData.description}
+                        onChange={handleChange}
+                        required
+                    ></textarea>
+                </div>
 
-            {/* Price */}
-            <div className="mb-3">
-                <label htmlFor="price" className="form-label">Price ($)</label>
-                <input
-                    type="number"
-                    className="form-control"
-                    id="price"
-                    name="price"
-                    step="0.01"
-                    min="0"
-                    value={formData.price}
-                    onChange={handleChange}
-                    required
-                />
-            </div>
+                {/* Price */}
+                <div className="mb-3">
+                    <label htmlFor="price" className="form-label">Price ($)</label>
+                    <input
+                        type="number"
+                        className="form-control"
+                        id="price"
+                        name="price"
+                        step="0.01"
+                        min="0"
+                        value={formData.price}
+                        onChange={handleChange}
+                        required
+                    />
+                </div>
 
-            {/* Image Upload */}
-            <div className="mb-3">
-                <label htmlFor="image" className="form-label">Upload Image</label>
-                <input
-                    className="form-control"
-                    type="file"
-                    id="image"
-                    name="image"
-                    accept="image/*"
-                    onChange={handleFileChange}
-                    required
-                />
-            </div>
+                {/* Image Upload */}
+                <div className="mb-3">
+                    <label htmlFor="image" className="form-label">Upload Image</label>
+                    <input
+                        className="form-control"
+                        type="file"
+                        id="image"
+                        name="image"
+                        accept="image/*"
+                        onChange={handleFileChange}
+                        required
+                    />
+                </div>
 
-            {/* Category Dropdown */}
-            <div className="mb-3">
-                <label htmlFor="category" className="form-label">Category</label>
-                <select
-                    className="form-select"
-                    id="category"
-                    name="category"
-                    value={formData.category}
-                    onChange={handleChange}
-                    required
-                >
-                    <option value="">Select a category</option>
-                    {category.map(eachCat => <option key={eachCat?.id} value={eachCat?.id}>{eachCat.catName}</option>)}
-                </select>
-            </div>
+                {/* Category Dropdown */}
+                <div className="mb-3">
+                    <label htmlFor="category" className="form-label">Category</label>
+                    <select
+                        className="form-select"
+                        id="category"
+                        name="category"
+                        value={formData.category}
+                        onChange={handleChange}
+                        required
+                    >
+                        <option value="">Select a category</option>
+                        {category.map(eachCat => <option key={eachCat?.id} value={eachCat?.id}>{eachCat.catName}</option>)}
+                    </select>
+                </div>
 
-            {/* Submit */}
-            <button type="submit" className="btn btn-primary">Submit</button>
-        </form>
+                {/* Submit */}
+                <button type="submit" className="btn btn-primary">Submit</button>
+            </form>
+        </div>
     );
 }
 

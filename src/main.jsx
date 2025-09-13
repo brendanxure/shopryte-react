@@ -10,7 +10,7 @@ import Navbar from './Navbar.jsx';
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <BrowserRouter>
-      <div><Navbar /></div>
+      <Navbar />
       <Routes>
         <Route path='/' element={<App />} />
         <Route path='/add' element={<AddProduct />} />
