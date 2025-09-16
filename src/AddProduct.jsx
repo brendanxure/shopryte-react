@@ -94,7 +94,7 @@ const AddProduct = () => {
     }
 
     return (
-        <div className='container my-4' style={{ minWidth: "700px" }}>
+        <div className='container my-4' style={{ minWidth: "800px" }}>
             <form onSubmit={handleSubmit} className="p-3 border rounded shadow-sm">
                 {/* Product Name */}
                 <div className="mb-3">
