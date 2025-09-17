@@ -6,6 +6,7 @@ import App from './App.jsx'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import AddProduct from './AddProduct.jsx';
 import Navbar from './Navbar.jsx';
+import Footer from './Footer.jsx';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -15,6 +16,7 @@ createRoot(document.getElementById('root')).render(
         <Route path='/' element={<App />} />
         <Route path='/add' element={<AddProduct />} />
       </Routes>
+      <Footer />
     </BrowserRouter>
 
   </StrictMode>,
