@@ -1,0 +1,9 @@
+import React from 'react'
+
+const Footer = () => {
+    return (
+        <div><footer class="footer mt-auto py-3 bg-body-tertiary"> <div class="container"> <span class="text-body-secondary">Place sticky footer content here.</span> </div> </footer><main class="flex-shrink-0"> <div class="container"> <h1 class="mt-5">Sticky footer</h1> <p class="lead">Pin a footer to the bottom of the viewport in desktop browsers with this custom HTML and CSS.</p> <p>Use <a href="/docs/5.3/examples/sticky-footer-navbar/">the sticky footer with a fixed navbar</a> if need be, too.</p> </div> </main> <footer class="footer mt-auto py-3 bg-body-tertiary"> <div class="container"> <span class="text-body-secondary">Place sticky footer content here.</span> </div> </footer><main class="flex-shrink-0"> <div class="container"> <h1 class="mt-5">Sticky footer</h1> <p class="lead">Pin a footer to the bottom of the viewport in desktop browsers with this custom HTML and CSS.</p> <p>Use <a href="/docs/5.3/examples/sticky-footer-navbar/">the sticky footer with a fixed navbar</a> if need be, too.</p> </div> </main> <footer class="footer mt-auto py-3 bg-body-tertiary"> <div class="container"> <span class="text-body-secondary">Place sticky footer content here.</span> </div> </footer></div>
+    )
+}
+
+export default Footer

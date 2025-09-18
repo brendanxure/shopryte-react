@@ -71,7 +71,7 @@ function App() {
         </div>
       </div>
       <div>
-        {filteredProducts.length ? (<ProductList products={filteredProducts} />) : (<p>...loading Please wait</p>)}
+        {filteredProducts.length ? (<ProductList products={filteredProducts} />) : (<p>...loading please wait</p>)}
       </div>
     </div>
   )
