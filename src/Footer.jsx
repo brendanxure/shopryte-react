@@ -4,7 +4,7 @@ const Footer = () => {
     const date = new Date();
     const year = date.getFullYear();
     return (
-        <div><footer class="footer mt-auto py-3 bg-body-tertiary"> &copy; ${year} Xurepify</footer></div>
+        <div><footer class="footer mt-auto py-3 bg-body-tertiary"> &copy; {year} Xurepify</footer></div>
     )
 }
 
