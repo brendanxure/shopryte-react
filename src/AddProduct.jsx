@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { data, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const AddProduct = () => {
     const [formData, setFormData] = useState({
