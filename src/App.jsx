@@ -53,7 +53,7 @@ function App() {
   console.log(filteredProducts)
 
   return (
-    <div className='container'>
+    <div className='container-fluid'>
       <h1 className='my-4'>Product Catalog</h1>
       <div className='row align-items-center mb-4'>
         <div className='col-md-3 col-sm-12 mb-2'>
