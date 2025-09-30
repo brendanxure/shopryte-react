@@ -64,7 +64,7 @@ function App() {
 
         </div>
         <div className='col-md-4 col-sm-12 mb-2'>
-          <select name="" id="sort-select" className='form-control' onChange={handleSort}>
+          <select name="sort-select" id="sort-select" className='form-control' onChange={handleSort}>
             <option value="asc"> Sort by Price: Low to High </option>
             <option value="desc"> Sort by Price: High to Low </option>
           </select>
