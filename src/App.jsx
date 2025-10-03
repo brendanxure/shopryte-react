@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react'
-import viteLogo from '/vite.svg'
 import './App.css'
 import ProductList from './ProductList'
 import CategoryFilter from './CategoryFilter'
