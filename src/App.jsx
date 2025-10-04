@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react'
 import './App.css'
 import ProductList from './ProductList'
 import CategoryFilter from './CategoryFilter'
-import Navbar from './Navbar'
 
 function App() {
   const [products, setProducts] = useState([])
