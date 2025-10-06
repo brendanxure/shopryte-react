@@ -1,5 +1,4 @@
 
-
 const CategoryFilter = ({ category, onSelect }) => {
     return (
         <div>
