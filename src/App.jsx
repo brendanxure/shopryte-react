@@ -11,7 +11,6 @@ function App() {
   const [sortOrder, setSortOrder] = useState("asc")
 
   console.log(products)
-  console.log(category)
 
   const baseUrl = import.meta.env.VITE_API_PROD_URL
   useEffect(() => {
