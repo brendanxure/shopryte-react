@@ -10,7 +10,6 @@ function App() {
   const [searchTerm, setSearchTerm] = useState("")
   const [sortOrder, setSortOrder] = useState("asc")
 
-  console.log(products)
 
   const baseUrl = import.meta.env.VITE_API_PROD_URL
   useEffect(() => {
