@@ -21,7 +21,6 @@ const AddProduct = () => {
             .then(data => setCategory(data))
     }, [])
 
-    console.log(category)
 
     // Handle text/number/dropdown inputs
     const handleChange = (e) => {
