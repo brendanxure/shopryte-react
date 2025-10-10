@@ -53,7 +53,6 @@ const AddProduct = () => {
             imageUrl: urlImage,
         };
 
-        console.log("Submitted product:", product);
         if (urlImage) {
             try {
                 const res = await fetch(baseUrl + '/api/products', {
