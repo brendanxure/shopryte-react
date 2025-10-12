@@ -41,7 +41,7 @@ const AddProduct = () => {
         if (!formCategory) {
             return;
         }
-        console.log(formCategory)
+
         const urlImage = await uploadImage();
         // Create product object
         const product = {
