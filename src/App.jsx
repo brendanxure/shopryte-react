@@ -55,7 +55,7 @@ function App() {
           <CategoryFilter category={category} onSelect={handleCategory} />
         </div>
         <div className='col-md-5 col-sm-12 mb-2'>
-          <input type="text" className='form-control' placeholder='Search for products' onChange={handleSearch} name="" id="" />
+          <input type="text" className='form-control' placeholder='Search for products' onChange={handleSearch} name="search" id="" />
 
         </div>
         <div className='col-md-4 col-sm-12 mb-2'>
